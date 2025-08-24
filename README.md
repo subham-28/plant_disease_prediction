@@ -56,12 +56,12 @@ plant_disease_prediction/
 
 - Model Type: Convolutional Neural Network (CNN)
 - Architecture:
-  -- Multiple convolution + pooling layers for feature extraction
-  -- Fully connected layers for classification
+  - Multiple convolution + pooling layers for feature extraction
+  - Fully connected layers for classification
 - Input Features:
-  -- Leaf images of different plants (RGB format, resized to fixed dimensions)
+  - Leaf images of different plants (RGB format, resized to fixed dimensions)
 - Output:
-  -- Predicted plant disease category (e.g., healthy, bacterial spot, late blight, etc.)
+  - Predicted plant disease category (e.g., healthy, bacterial spot, late blight, etc.)
 - Optimizer: Adam
 - Loss function: Categorical Cross-Entropy
 
@@ -137,4 +137,5 @@ MIT License. Feel free to use, modify, and share!
 ---
 
 Made by Subham Mohanty
+
 
