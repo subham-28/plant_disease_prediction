@@ -1,5 +1,5 @@
 import os
-os.environ["STREAMLIT_SERVER_RUN_ON_SAVE"] = "false"
+os.environ["STREAMLIT_SERVER_RUN_ON_SAVE"] = "none"
 
 import streamlit as st
 import numpy as np
