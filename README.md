@@ -54,18 +54,30 @@ plant_disease_prediction/
 
 📊 Model Overview
 
-- Model Type: Convolutional Neural Network (CNN)
-- Architecture:
-  - Multiple convolution + pooling layers for feature extraction
-  - Fully connected layers for classification
-- Input Features:
-  - Leaf images of different plants (RGB format, resized to fixed dimensions)
-- Output:
-  - Predicted plant disease category (e.g., healthy, bacterial spot, late blight, etc.)
-- Optimizer: Adam
-- Loss function: Categorical Cross-Entropy
-
-Goal: Accurately classify plant leaf images into disease categories to help farmers and researchers with early detection and treatment.
+- Preprocessing:
+  - Rescaling pixel values (0–1)
+  - Train-validation split (80-20) via ImageDataGenerator
+  - Image resizing to 224×224
+- Model Architecture (CNN):
+  - Conv2D (32 filters, 3×3, ReLU) → MaxPooling2D
+  - Conv2D (64 filters, 3×3, ReLU) → MaxPooling2D
+  - Conv2D (128 filters, 3×3, ReLU) → MaxPooling2D
+  - Flatten → Dense(256, ReLU) → Dense(128, ReLU) → Dense(num_classes, Softmax)
+- Training Setup:
+  - Optimizer: Adam
+  - Loss: Categorical Crossentropy
+  - Metrics: Accuracy
+  - Epochs: 7
+  - Batch size: 32
+- Evaluation:
+  - Validation Accuracy: ~90.65%
+  - Plotted accuracy & loss curves for train vs validation
+- Prediction Pipeline:
+  - Preprocess single image (resize → normalize → expand dims)
+  - Predict with trained model → return class name & confidence %
+- Model Saving:
+  - Saved as plant_model.keras
+  - Class index mapping saved in class_indices.json
 
 ### ✅ Performance Metrics
 
@@ -137,5 +149,6 @@ MIT License. Feel free to use, modify, and share!
 ---
 
 Made by Subham Mohanty
+
 
 
