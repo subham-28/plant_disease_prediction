@@ -65,7 +65,6 @@ if uploaded_image is not None:
                 f"""
                 <div style='background-color:#eafbea;padding:20px;border-radius:10px;'>
                 <h3 style='color:#1b5e20;'>✅ Prediction: {predicted_class}</h3>
-                <p style='font-size:16px;'>Model Confidence:</p>
                 </div>
                 """,
                 unsafe_allow_html=True
