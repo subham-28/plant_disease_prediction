@@ -5,9 +5,9 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 
 # Load model
-model = load_model("Models\plant_model.keras")
+model = load_model("Models/plant_model.keras")
 
-with open("Models\class_indices.json", "r") as f:
+with open("Models/class_indices.json", "r") as f:
     class_indices = json.load(f)
 class_indices = {int(k): v for k, v in class_indices.items()}
 
