@@ -1,11 +1,12 @@
+import os
+os.environ["STREAMLIT_SERVER_RUN_ON_SAVE"] = "false"
+
 import streamlit as st
 import numpy as np
 import json
 from tensorflow.keras.models import load_model
 from PIL import Image
-import os
 
-os.environ["STREAMLIT_SERVER_RUN_ON_SAVE"] = "false"
 
 # Load model
 model = load_model("Models/plant_model.keras")
