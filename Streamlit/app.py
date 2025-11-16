@@ -78,27 +78,40 @@ if uploaded_image is not None:
 
 
 # ---------- 🔗 Footer ----------
+# st.markdown(
+#     """
+#     <style>
+#     footer {
+#         visibility: hidden;
+#     }
+#     .footer {
+#         position: fixed;
+#         left: 0;
+#         bottom: 0;
+#         width: 100%;
+#         text-align: center;
+#         padding: 10px;
+#         font-size: 14px;
+#         color: white;
+#         background: rgba(0,0,0,0.8);
+#     }
+#     </style>
+#     <div class="footer">
+#         Made by Subham Mohanty | Powered by Streamlit
+#     </div>
+#     """,
+#     unsafe_allow_html=True
+#)
+
+
 st.markdown(
     """
     <style>
     footer {
         visibility: hidden;
     }
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        font-size: 14px;
-        color: white;
-        background: rgba(0,0,0,0.8);
-    }
     </style>
-    <div class="footer">
-        Made by Subham Mohanty | Powered by Streamlit
-    </div>
     """,
     unsafe_allow_html=True
 )
+
